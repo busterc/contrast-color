@@ -6,6 +6,9 @@
 - [YIQ](https://en.wikipedia.org/wiki/YIQ#:~:text=YIQ%20is%20the%20color%20space,used%20in%20quadrature%20amplitude%20modulation.)
 - [Calculating Color Contrast](https://24ways.org/2010/calculating-color-contrast/)
 
+## Demo ([try it for yourself](https://codepen.io/buster/pen/PoGXdze))
+![](contrastColor.gif)
+
 ## Installation
 
 ```sh
