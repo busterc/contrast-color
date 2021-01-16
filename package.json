@@ -4,7 +4,7 @@
   "license": "ISC",
   "author": "Buster Collings <busterc@gmail.com> (https://about.me/buster)",
   "repository": "busterc/contrast-color",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "main": "lib/index.js",
   "files": [
     "dist",
