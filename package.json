@@ -1,0 +1,106 @@
+{
+  "name": "contrast-color",
+  "description": "Determines the best contrast color to use. Give it a background color and it returns a foreground color (black or white by default but customizable).",
+  "license": "ISC",
+  "author": "Buster Collings <busterc@gmail.com> (https://about.me/buster)",
+  "repository": "busterc/contrast-color",
+  "version": "0.0.0",
+  "main": "lib/index.js",
+  "files": [
+    "dist",
+    "lib"
+  ],
+  "scripts": {
+    "prebuild": "rm -rf dist 2>/dev/null && mkdir dist",
+    "build": "parcel build lib/index.js --out-file contrastColor.js --global contrastColor --no-source-maps",
+    "postbuild": "NODE_ENV=BUILD jest",
+    "pretest": "eslint lib",
+    "test": "jest --coverage"
+  },
+  "devDependencies": {
+    "coveralls": "^3.0.7",
+    "eslint": "^7.15.0",
+    "eslint-config-prettier": "^6.6.0",
+    "eslint-config-xo": "^0.33.1",
+    "eslint-plugin-compat": "^3.8.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "husky": "^4.3.4",
+    "jest": "^26.1.0",
+    "jest-given": "^1.0.0",
+    "lint-staged": "^10.5.3",
+    "parcel": "^1.12.4",
+    "prettier": "^2.2.1"
+  },
+  "keywords": [
+    "accessibility",
+    "background",
+    "black",
+    "bright",
+    "brighten",
+    "brightness",
+    "chroma",
+    "color",
+    "colors",
+    "contrast",
+    "convert",
+    "css",
+    "dark",
+    "darken",
+    "font",
+    "foreground",
+    "hex",
+    "hsl",
+    "hsv",
+    "light",
+    "lightness",
+    "luma",
+    "luminosity",
+    "rgb",
+    "text",
+    "wcag",
+    "white",
+    "yiq"
+  ],
+  "engines": {
+    "npm": ">= 4.0.0"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ],
+  "eslintConfig": {
+    "extends": [
+      "xo",
+      "prettier",
+      "plugin:compat/recommended"
+    ],
+    "env": {
+      "jest": true,
+      "node": true,
+      "browser": true
+    },
+    "rules": {
+      "prettier/prettier": "error"
+    },
+    "plugins": [
+      "prettier"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}

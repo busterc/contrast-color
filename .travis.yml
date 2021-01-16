@@ -1,0 +1,5 @@
+language: node_js
+node_js:
+  - v14
+  - v10
+after_script: cat ./coverage/lcov.info | coveralls
