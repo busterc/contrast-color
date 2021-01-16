@@ -12,7 +12,7 @@
   ],
   "scripts": {
     "prebuild": "rm -rf dist 2>/dev/null && mkdir dist",
-    "build": "parcel build lib/index.js --out-file contrastColor.js --global contrastColor --no-source-maps",
+    "build": "parcel build lib/index.js --out-file contrastColor.js --global ContrastColor --no-source-maps",
     "postbuild": "NODE_ENV=BUILD jest",
     "pretest": "eslint lib",
     "test": "jest --coverage"
