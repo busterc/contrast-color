@@ -9,7 +9,7 @@
 ## Installation
 
 ```sh
-$ npm install --save contrast-color
+$ npm install contrast-color
 ```
 
 ## Usage
