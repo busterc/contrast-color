@@ -20,25 +20,22 @@ $ npm install contrast-color
 ```js
 // Use via class instance
 const ContrastColor = require('contrast-color');
-const cc = ContrastColor({ 
-  bgColor: 'navy',
-  fgDarkColor: 'water',
-  fgLightColor: 'navy',
-  fgDarkColor: '#0570E3',
+const cc = new ContrastColor({
+  bgColor: "navy",
+  fgDarkColor: "navy",
+  fgLightColor: "water",
   customNamedColors: {
-    water: '#00D0FF'
-  }
+    water: "#00D0FF",
+  },
 });
 
 const defaultFgColor = cc.contrastColor();
-const inverseFgColor = cc.contrastColor({ bgColor: 'water' });
-const hasAquaBgColor = cc.contrastColor({ bgColor: 'aqua' });
+const hasAquaBgColor = cc.contrastColor({ bgColor: "aqua" });
 
 /* Results
 {
-  defaultFgColor: '#000080',
-  inverseFgColor: '#0570E3',
-  hasAquaBgColor: '#0570E3'
+  defaultFgColor: '#00D0FF', // water
+  hasAquaBgColor: '#000080'  // navy
 }
 */
 
@@ -65,12 +62,12 @@ const hasKitchenSink = contrastColor({
 
 /* Results:
 {
-  hasRedBg: '#FFFFFF',
-  hasRedBgWithBlackFg: '#000000',
-  hasYellowBg: '#000000',
-  hasWhiteBgWithGreenFg: '#008000',
-  hasBlackBgWithLimeFg: '#00FF00',
-  hasKitchenSink: '#ff99ff'
+  hasRedBg: '#FFFFFF',              // white
+  hasRedBgWithBlackFg: '#000000',   // black
+  hasYellowBg: '#000000',           // black
+  hasWhiteBgWithGreenFg: '#008000', // green
+  hasBlackBgWithLimeFg: '#00FF00',  // lime
+  hasKitchenSink: '#ff99ff'         // clean
 }
 */
 ```
